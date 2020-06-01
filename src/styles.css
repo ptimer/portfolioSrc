@@ -1,0 +1,34 @@
+*{
+	box-sizing: border-box;
+}
+
+*{
+  font-family: "Monaco", Inconsolata, monospace;
+  font-size: 17px ;
+  color: #f8f8f8;
+}
+
+body{
+  background: url("https://static.tumblr.com/94eb957a00fd03c0c2f7d26decd71578/u1rhacw/osAmyyh1q/tumblr_static_tumblr_static_gaussian_blur_gradient_desktop_1680x943_wallpaper-393751.jpg");
+  min-height: 100vh;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.FilterableProductTable{
+  width: 300px;
+  height: 400px;
+  min-height: 400px;
+  border: 1px solid yellow;
+  padding: 10px;
+}
