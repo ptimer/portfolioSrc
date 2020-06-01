@@ -103,8 +103,53 @@ export let TerminalTheme = ({title, onClose, onMinimize, onMaximize, titleBarCol
 			</TitleBar>),
 		windowClassName: 'terminal',
 		contentClassName: 'terminal__text',
+		contentIdName: 'typedtext',
 		ContentChildren: (
-			<span className='terminal__text__span'>Привет, меня зовут Илья</span>
+			<div>
+				<span className='terminal__text__span'>Привет, меня зовут Илья</span><br/>
+				<span className='terminal__text__span'>И я начинающий фронтенд разработчик</span><br/>
+				<span className='terminal__text__span'>Это мое портфолио :)</span>
+			</div>
+		)
+	}
+}
+
+
+export let TextFileTheme = ({title, onClose, onMinimize, onMaximize, titleBarColor = '#0095ff'}) => {
+
+	const buttons = {
+		className: 'terminal__head'
+	}
+
+	const closeButton = {
+		className: 'terminal__circle terminal__circle_close',
+		onClick: onClose
+	}
+
+	const minimizeButton = {
+		className: 'terminal__circle terminal__circle_turn',
+		onClick: onMinimize
+	}
+
+	const maximizeButton = {
+		className: 'terminal__circle terminal__circle_expand',
+		onClick: onMaximize
+	}
+	return {
+		titleBar: (<TitleBar
+				buttons={buttons}
+				button1={closeButton}
+				button2={minimizeButton}
+				button3={maximizeButton}
+				button1Children='Закрыть'
+				button2Children='Свернуть'
+				button3Children='На весь экран'>
+			</TitleBar>),
+		windowClassName: 'terminal',
+		contentClassName: 'terminal__text',
+		contentIdName: 'typedtext',
+		ContentChildren: (
+			<span className='terminal__text__span'>Text file</span>
 		)
 	}
 }

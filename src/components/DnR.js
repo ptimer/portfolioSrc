@@ -88,20 +88,22 @@ export default class DnR extends React.Component {
     this.props.attachedTo.removeEventListener('mousemove', this.mouseMoveListener)
     this.props.attachedTo.removeEventListener('mouseup', this.mouseUpListener)
   }
+
+
   transform(state, allowTransition = true, updateHistory = true) {
     const boundingBox = this.getFrameRect()
 
     let top = this.refs.frame.offsetTop
     let left = this.refs.frame.offsetLeft
-    let width = boundingBox.width
-    let height = boundingBox.height
+    let width = boundingBox.width;
+    let height = boundingBox.height;
 
     if (updateHistory) {
       this.prevState = {
         top: top,
         left: left,
         width: width,
-        height: height,
+        height: height
       }
     }
 
@@ -124,8 +126,12 @@ export default class DnR extends React.Component {
     }
     this.forceUpdate()
   }
+
+
   restore(allowTransition = true) {
-    this.transform(this.prevState, allowTransition)
+    let width = this.getFrameRect().width === 0 ? this.getFrameRect().width = 600 : this.getFrameRect().width;
+    let height = this.getFrameRect().height === 0 ? this.getFrameRect().height = 300 : this.getFrameRect().height;
+    this.transform(this.prevState = {width: width, height: height}, allowTransition)
   }
   minimize(allowTransition = true) {
     this.transform({width: 0, height: 0}, allowTransition)
@@ -138,6 +144,7 @@ export default class DnR extends React.Component {
       style,
       contentStyle,
       contentClassName,
+      contentIdName,
       windowClassName,
       titleStyle,
       titleBarClassName,
@@ -277,6 +284,7 @@ export default class DnR extends React.Component {
         {titleBar}
         <div ref='content'
           className={contentClassName}
+          id={contentIdName}
           style={{position: 'absolute', width: '100%', top: theme.title.height, bottom: 0, ...contentStyle}}>
           {childrenWithProps}
         </div>
@@ -364,8 +372,8 @@ DnR.propTypes = {
     PropTypes.string,
   ]),
   style: PropTypes.object,
-  contentClassName: PropTypes.object,
-  windowClassName: PropTypes.object,
+  contentClassName: PropTypes.string,
+  windowClassName: PropTypes.string,
   contentStyle: PropTypes.object,
   titleStyle: PropTypes.object,
   titleBarClassName: PropTypes.object,
