@@ -43,6 +43,11 @@ export default class TerminalWindow extends React.Component {
 						top: 0,
 						left: 0,
 					}}>
+					<div>
+						<span className='terminal__text__span'>Привет, меня зовут Илья</span><br/>
+						<span className='terminal__text__span'>И я начинающий фронтенд разработчик</span><br/>
+						<span className='terminal__text__span'>Это мое портфолио :)</span>
+					</div>
 				</DnR>
 		  </React.Fragment>
 		);

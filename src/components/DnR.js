@@ -287,6 +287,8 @@ export default class DnR extends React.Component {
           id={contentIdName}
           style={{position: 'absolute', width: '100%', top: theme.title.height, bottom: 0, ...contentStyle}}>
           {childrenWithProps}
+
+          {this.props.children}
         </div>
       </div>
     )

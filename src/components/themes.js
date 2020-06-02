@@ -51,6 +51,7 @@ export const TitleBar = ({
 	button1Children,
 	button2Children,
 	button3Children,
+	title,
   dnrState
 }) =>
 	<div>
@@ -64,6 +65,9 @@ export const TitleBar = ({
 			<Button {...button3} cursor={dnrState.cursor}>
 				{button3Children}
 			</Button>
+			<div style={{ position: 'absolute', right: 20, color: '#999'}}>
+				{title}
+			</div>
 		</div>
 		{children}
 	</div>
@@ -99,18 +103,12 @@ export let TerminalTheme = ({title, onClose, onMinimize, onMaximize, titleBarCol
 				button3={maximizeButton}
 				button1Children='Закрыть'
 				button2Children='Свернуть'
-				button3Children='На весь экран'>
+				button3Children='На весь экран'
+				title="Терминал">
 			</TitleBar>),
 		windowClassName: 'terminal',
 		contentClassName: 'terminal__text',
 		contentIdName: 'typedtext',
-		ContentChildren: (
-			<div>
-				<span className='terminal__text__span'>Привет, меня зовут Илья</span><br/>
-				<span className='terminal__text__span'>И я начинающий фронтенд разработчик</span><br/>
-				<span className='terminal__text__span'>Это мое портфолио :)</span>
-			</div>
-		)
 	}
 }
 
@@ -143,13 +141,11 @@ export let TextFileTheme = ({title, onClose, onMinimize, onMaximize, titleBarCol
 				button3={maximizeButton}
 				button1Children='Закрыть'
 				button2Children='Свернуть'
-				button3Children='На весь экран'>
+				button3Children='На весь экран'
+				title='ReadMe.txt'
+				>
 			</TitleBar>),
-		windowClassName: 'terminal',
-		contentClassName: 'terminal__text',
-		contentIdName: 'typedtext',
-		ContentChildren: (
-			<span className='terminal__text__span'>Text file</span>
-		)
+		windowClassName: 'window',
+		contentClassName: 'window-body',
 	}
 }

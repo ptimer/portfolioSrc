@@ -43,8 +43,13 @@ export default class TextFileWindow extends React.Component {
 						top: 0,
 						left: 0,
 					}}>
+					<textarea class="code-input">Оу привет! Давно сюда никто не заходил.
+						У меня здесь есть масса интересного материала, начиная фильмами, книгами, которые я читаю, заканчивая материалом, который
+						я изучаю на пути своего развития, как веб-разработчика. 
+					</textarea>
 				</DnR>
 		  </React.Fragment>
 		);
 	}
 }
+

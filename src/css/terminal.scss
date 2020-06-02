@@ -2,8 +2,8 @@
 	user-select: none;
 	/* for resize effect */
 	position: relative;
-	max-width: 95%;
-	max-height: 95%;
+	max-width: 100%;
+	max-height: 100%;
 	background: rgba(8, 57, 82, 0.64);
 	border-radius: 7px 7px;
 	transition: box-shadow .3s linear;
@@ -22,6 +22,7 @@
 	  display: flex;
 	  justify-content: start;
 	  align-items: center;
+	  position: relative;
 	}
 	&__text{
 	  padding: 20px 5%;
