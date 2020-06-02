@@ -129,8 +129,8 @@ export default class DnR extends React.Component {
 
 
   restore(allowTransition = true) {
-    let width = this.getFrameRect().width === 0 ? this.getFrameRect().width = 600 : this.getFrameRect().width;
-    let height = this.getFrameRect().height === 0 ? this.getFrameRect().height = 300 : this.getFrameRect().height;
+    let width = this.getFrameRect().width === 0 ? this.getFrameRect().width = 800 : this.getFrameRect().width;
+    let height = this.getFrameRect().height === 0 ? this.getFrameRect().height = 600 : this.getFrameRect().height;
     this.transform(this.prevState = {width: width, height: height}, allowTransition)
   }
   minimize(allowTransition = true) {

@@ -149,3 +149,40 @@ export let TextFileTheme = ({title, onClose, onMinimize, onMaximize, titleBarCol
 		contentClassName: 'window-body',
 	}
 }
+
+
+export let PortfolioTheme = ({title, onClose, onMinimize, onMaximize, titleBarColor = '#0095ff'}) => {
+
+	const buttons = {
+		className: 'terminal__head'
+	}
+
+	const closeButton = {
+		className: 'terminal__circle terminal__circle_close',
+		onClick: onClose
+	}
+
+	const minimizeButton = {
+		className: 'terminal__circle terminal__circle_turn',
+		onClick: onMinimize
+	}
+
+	const maximizeButton = {
+		className: 'terminal__circle terminal__circle_expand',
+		onClick: onMaximize
+	}
+	return {
+		titleBar: (<TitleBar
+				buttons={buttons}
+				button1={closeButton}
+				button2={minimizeButton}
+				button3={maximizeButton}
+				button1Children='Закрыть'
+				button2Children='Свернуть'
+				button3Children='На весь экран'
+				title='Портфолио'
+				>
+			</TitleBar>),
+		contentClassName: 'portfolioWindow',
+	}
+}

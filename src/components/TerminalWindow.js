@@ -1,4 +1,4 @@
-import React, {useRef } from "react";
+import React from "react";
 import DnR from './DnR';
 import {TerminalTheme} from './themes';
 
@@ -46,7 +46,9 @@ export default class TerminalWindow extends React.Component {
 					<div>
 						<span className='terminal__text__span'>Привет, меня зовут Илья</span><br/>
 						<span className='terminal__text__span'>И я начинающий фронтенд разработчик</span><br/>
-						<span className='terminal__text__span'>Это мое портфолио :)</span>
+						<span className='terminal__text__span'>Этот сайт что-то наподобие портфолио</span><br/>
+						<span className='terminal__text__span'></span><br/>
+						<span className='terminal__text__span'>На рабочем столе вы найдете больше информации обо мне :D</span>
 					</div>
 				</DnR>
 		  </React.Fragment>

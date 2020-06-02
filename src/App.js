@@ -6,12 +6,14 @@ import './css/footer.scss'
 import './css/header.scss'
 import './css/textfile.scss'
 import './css/svgCenter.scss'
+import './css/portfolio.scss'
 
 import SvgCenter from './components/static/SvgCenter';
 import Header from './components/static/Header'
 import Footer from './components/static/Footer';
 import TerminalWindow from './components/TerminalWindow';
 import TextFileWindow from './components/TextFileWindow';
+import PortfolioWindow from './components/PortfolioWindow';
 
 export default function App() {
 
@@ -21,8 +23,9 @@ export default function App() {
       <Header />
       
       <div className="Desktop">
-		<TerminalWindow />
-		<TextFileWindow />
+    		<TerminalWindow />
+    		<TextFileWindow />
+        <PortfolioWindow />
       </div>
       
 
