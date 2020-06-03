@@ -19,15 +19,14 @@ export default class TerminalWindow extends React.Component {
 			onMinimize: ()=>this.refs.terminal.minimize(),
 			onMaximize: ()=>this.refs.terminal.maximize(),
 		});
-	}
-
+	} 
 
 	render() {
 		return (
 			<React.Fragment>
 
 
-				<Label WhenDoubleClicked={()=>this.refs.terminal.restore()} img='../code.svg' text='terminal'
+				<Label WhenDoubleClicked={()=>this.refs.terminal.restore()} img={process.env.PUBLIC_URL + '/code.svg'} text='terminal'
 				dragParam={{
 					id: 'Icon1',
 					x: 0,

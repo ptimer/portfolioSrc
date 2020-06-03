@@ -20,7 +20,7 @@ export default function Portfolio(){
             </div>
 			<div className="flip">
                 <div className="front" 
-                style={{backgroundImage: 'url(https://github.com/ptimer/ptimer.github.io/blob/master/rock-paper-scissors-master/design/desktop-preview.jpg?raw=true'}}>
+                style={{backgroundImage: 'url(https://github.com/ptimer/ptimer.github.io/blob/master/rock-paper-scissors-master/design/desktop-preview.jpg?raw=true)'}}>
                    <h1 class="text-shadow">09.05.20</h1>
                 </div>
                 <div class="back">

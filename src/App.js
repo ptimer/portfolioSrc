@@ -1,4 +1,5 @@
-import React from "react";
+import React, {Component} from "react";
+import {CubeGrid } from 'styled-loaders-react'
 import "./styles.css";
 import './css/terminal.scss'
 import './css/label.scss'
@@ -15,21 +16,49 @@ import TerminalWindow from './components/TerminalWindow';
 import TextFileWindow from './components/TextFileWindow';
 import PortfolioWindow from './components/PortfolioWindow';
 
-export default function App() {
+class App extends Component{
 
-  return (
-    <div className="App">
-      <SvgCenter />
-      <Header />
-      
-      <div className="Desktop">
-    		<TerminalWindow />
-    		<TextFileWindow />
-        <PortfolioWindow />
+  state = {
+    loading: true
+  }
+
+
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({
+        loading: false
+      })
+    }, 3000)
+  }
+
+  render(){
+    return (
+      <div className="App">
+        {
+          this.state.loading ? <CubeGrid color="yellow"/> : <Desktop/>
+        }
       </div>
-      
-
-      <Footer />
-    </div>
-  );
+    );
+  }
+  
 }
+
+
+const Desktop = () => {
+  return (
+    <React.Fragment>
+        <SvgCenter />
+        <Header />
+        
+        <div className="Desktop">
+          <TerminalWindow />
+          <TextFileWindow />
+          <PortfolioWindow />
+        </div>
+        
+        <Footer />
+    </React.Fragment>
+  )
+}
+
+export default App;
